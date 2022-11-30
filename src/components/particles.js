@@ -3,10 +3,9 @@ import { useFrame } from '@react-three/fiber'
 import { random } from 'canvas-sketch-util'
 import { Object3D } from 'three'
 
-export const Particles = () => {
+export const Particles = ({ count }) => {
   const light = useRef()
   const mesh = useRef()
-  const count = 100000
 
   const particles = useMemo(() => {
     const array = []

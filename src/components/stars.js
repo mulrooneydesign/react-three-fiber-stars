@@ -3,8 +3,7 @@ import { useFrame } from '@react-three/fiber'
 import { random } from 'canvas-sketch-util'
 import { Object3D, Color } from 'three'
 
-export const Stars = () => {
-  const count = 10000
+export const Stars = ({ count }) => {
   const light = useRef()
   const mesh = useRef()
   const material = useRef()
