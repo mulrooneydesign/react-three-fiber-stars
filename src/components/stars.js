@@ -66,7 +66,12 @@ export const Stars = ({ count }) => {
       <pointLight ref={light} distance={10} intensity={5} color="hotpink" />
       <instancedMesh ref={mesh} args={[null, null, count]}>
         <dodecahedronBufferGeometry args={[0.28, 0]} />
-        <meshLambertMaterial ref={material} color={color} />
+        <meshLambertMaterial
+          ref={material}
+          color={color}
+          toneMapped={false}
+          emissive="blue"
+        />
       </instancedMesh>
     </>
   )
